@@ -4,7 +4,7 @@ import pomegranateimg from './images/pomegranate.jpg'
 
 const data={
     productData:[
-        {
+            {
             id:1,
             img:appleimg,
             title:"Apple",
