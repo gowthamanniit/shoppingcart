@@ -2,6 +2,10 @@ import React from 'react'
 import { useCart } from 'react-use-cart'
 
 const Cart = () => {
+  const show=()=>{
+    console.log(`http://localhost:3005?amount=${cartTotal}`)
+    window.location.href=`http://localhost:3005?amount=${cartTotal}`
+  }
 
 const { isEmpty,
         totalUniqueItems,        
@@ -46,7 +50,9 @@ return(
         </div>
         <div className='col-auto'>
             <button className='btn btn-danger' onClick={()=>emptyCart()}>Clear Cart</button>
-            <button className='btn btn-primary ms-2'>Buy Now</button>
+            <button className='btn btn-primary ms-2'
+            onClick={show}>
+              Buy Now</button>
         </div>
         
     </div>
